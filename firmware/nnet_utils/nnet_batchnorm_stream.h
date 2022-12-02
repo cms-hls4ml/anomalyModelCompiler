@@ -40,7 +40,6 @@ void normalize(
 ) {
     #pragma HLS ARRAY_PARTITION variable=scale complete
     #pragma HLS ARRAY_PARTITION variable=bias complete
-    std::cout << "Puto5";
 
     constexpr unsigned multiplier_limit = DIV_ROUNDUP(CONFIG_T::n_in, CONFIG_T::reuse_factor);
     constexpr unsigned ii = CONFIG_T::n_in / multiplier_limit;
